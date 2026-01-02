@@ -1,0 +1,51 @@
+===
+header line
+===
+ScriptName Example
+
+---
+
+(source_file
+  (header_line
+    (identifier)
+    (eol)))
+
+===
+header line with extends
+===
+ScriptName Example Extends Form
+---
+
+(source_file
+  (header_line
+    (identifier)
+    (identifier)
+    (eol)))
+
+===
+header line with flag
+===
+ScriptName Example Hidden
+---
+
+(source_file
+  (header_line
+    (identifier)
+    (eol)))
+
+===
+import
+===
+ScriptName Example
+Import Game
+Import Debug
+---
+
+(source_file
+  (header_line
+    (identifier)
+    (eol))
+  (import
+    (identifier))
+  (import
+    (identifier)))
