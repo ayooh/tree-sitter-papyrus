@@ -184,6 +184,10 @@
         {
           "type": "SYMBOL",
           "name": "_full_identifier"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "eol"
         }
       ]
     },

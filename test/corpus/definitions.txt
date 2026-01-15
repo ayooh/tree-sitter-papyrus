@@ -46,6 +46,8 @@ Import Debug
     (identifier)
     (eol))
   (import
-    (identifier))
+    (identifier)
+    (eol))
   (import
-    (identifier)))
+    (identifier)
+    (eol)))

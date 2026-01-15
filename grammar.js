@@ -76,7 +76,7 @@ export default grammar({
       $._event_definition,
     ),
 
-    import: $ => seq(keyword("Import"), $._full_identifier),
+    import: $ => seq(keyword("Import"), $._full_identifier, $.eol),
 
     variable_definition: $ => seq(
       field("type", $.type),

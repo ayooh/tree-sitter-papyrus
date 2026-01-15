@@ -781,6 +781,16 @@
           }
         ]
       }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "eol",
+          "named": true
+        }
+      ]
     }
   },
   {
