@@ -55,6 +55,7 @@
   "Const"
   "Default"
   "DebugOnly"
+  "Global"
   "Hidden"
   "Mandatory"
   "Native"
