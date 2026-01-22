@@ -37,13 +37,16 @@ export default grammar({
 
   reserved: {
     global: _ => [
-      /As/i, /Auto/i, /AutoReadOnly/i, /BetaOnly/i, /Bool/i, /Const/i, /CustomEvent/i,
-      /CustomEventName/i, /DebugOnly/i, /Else/i, /ElseIf/i, /EndEvent/i, /EndFunction/i,
-      /EndGroup/i, /EndIf/i, /EndProperty/i, /EndState/i, /EndStruct/i, /EndWhile/i,
-      /Event/i, /Extends/i, /False/i, /Float/i, /Function/i, /Global/i, /Group/i, /If/i,
-      /Import/i, /Is/i, /Int/i, /Length/i, /Native/i, /New/i, /None/i, /Property/i,
-      /Return/i, /ScriptName/i, /ScriptEventName/i, /State/i, /String/i, /Struct/i,
-      /StructVarName/i, /True/i, /Var/i, /While/i,
+      /As/i, /Auto/i, /AutoReadOnly/i, /Bool/i, /Else/i, /ElseIf/i, /EndEvent/i,
+      /EndFunction/i, /EndIf/i, /EndProperty/i, /EndState/i, /EndWhile/i, /Event/i,
+      /Extends/i, /False/i, /Float/i, /Function/i, /Global/i, /If/i, /Import/i,
+      /Int/i, /Length/i, /Native/i, /New/i, /None/i, /Property/i, /Return/i,
+      /ScriptName/i, /State/i, /String/i, /True/i, /While/i,
+
+      // keywords added in Fallout 4
+      // /BetaOnly/i, /Const/i, /CustomEvent/i, /CustomEventName/i, /DebugOnly/i,
+      // /EndGroup/i, /EndStruct/i, /Group/i, /Is/i, /ScriptEventName/i, /Struct/i,
+      // /StructVarName/i, /Var/i,
     ],
   },
 
@@ -245,12 +248,13 @@ export default grammar({
     ),
 
     parameter: $ => seq(
-      field("type", choice(
-        $.type,
-        alias(keyword("CustomEventName"), $.type),
-        alias(keyword("ScriptEventName"), $.type),
-        alias(keyword("StructVarName"), $.type),
-      )),
+      field("type", $.type),
+      // field("type", choice(
+      //   $.type,
+      //   alias(keyword("CustomEventName"), $.type),
+      //   alias(keyword("ScriptEventName"), $.type),
+      //   alias(keyword("StructVarName"), $.type),
+      // )),
       field("name", $.identifier),
       optional(seq("=", field("value", $.literal))),
     ),

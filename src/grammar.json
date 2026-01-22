@@ -1337,58 +1337,8 @@
           "type": "FIELD",
           "name": "type",
           "content": {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "SYMBOL",
-                "name": "type"
-              },
-              {
-                "type": "ALIAS",
-                "content": {
-                  "type": "ALIAS",
-                  "content": {
-                    "type": "PATTERN",
-                    "value": "CustomEventName",
-                    "flags": "i"
-                  },
-                  "named": false,
-                  "value": "CustomEventName"
-                },
-                "named": true,
-                "value": "type"
-              },
-              {
-                "type": "ALIAS",
-                "content": {
-                  "type": "ALIAS",
-                  "content": {
-                    "type": "PATTERN",
-                    "value": "ScriptEventName",
-                    "flags": "i"
-                  },
-                  "named": false,
-                  "value": "ScriptEventName"
-                },
-                "named": true,
-                "value": "type"
-              },
-              {
-                "type": "ALIAS",
-                "content": {
-                  "type": "ALIAS",
-                  "content": {
-                    "type": "PATTERN",
-                    "value": "StructVarName",
-                    "flags": "i"
-                  },
-                  "named": false,
-                  "value": "StructVarName"
-                },
-                "named": true,
-                "value": "type"
-              }
-            ]
+            "type": "SYMBOL",
+            "name": "type"
           }
         },
         {
@@ -3077,32 +3027,7 @@
       },
       {
         "type": "PATTERN",
-        "value": "BetaOnly",
-        "flags": "i"
-      },
-      {
-        "type": "PATTERN",
         "value": "Bool",
-        "flags": "i"
-      },
-      {
-        "type": "PATTERN",
-        "value": "Const",
-        "flags": "i"
-      },
-      {
-        "type": "PATTERN",
-        "value": "CustomEvent",
-        "flags": "i"
-      },
-      {
-        "type": "PATTERN",
-        "value": "CustomEventName",
-        "flags": "i"
-      },
-      {
-        "type": "PATTERN",
-        "value": "DebugOnly",
         "flags": "i"
       },
       {
@@ -3127,11 +3052,6 @@
       },
       {
         "type": "PATTERN",
-        "value": "EndGroup",
-        "flags": "i"
-      },
-      {
-        "type": "PATTERN",
         "value": "EndIf",
         "flags": "i"
       },
@@ -3143,11 +3063,6 @@
       {
         "type": "PATTERN",
         "value": "EndState",
-        "flags": "i"
-      },
-      {
-        "type": "PATTERN",
-        "value": "EndStruct",
         "flags": "i"
       },
       {
@@ -3187,22 +3102,12 @@
       },
       {
         "type": "PATTERN",
-        "value": "Group",
-        "flags": "i"
-      },
-      {
-        "type": "PATTERN",
         "value": "If",
         "flags": "i"
       },
       {
         "type": "PATTERN",
         "value": "Import",
-        "flags": "i"
-      },
-      {
-        "type": "PATTERN",
-        "value": "Is",
         "flags": "i"
       },
       {
@@ -3247,11 +3152,6 @@
       },
       {
         "type": "PATTERN",
-        "value": "ScriptEventName",
-        "flags": "i"
-      },
-      {
-        "type": "PATTERN",
         "value": "State",
         "flags": "i"
       },
@@ -3262,22 +3162,7 @@
       },
       {
         "type": "PATTERN",
-        "value": "Struct",
-        "flags": "i"
-      },
-      {
-        "type": "PATTERN",
-        "value": "StructVarName",
-        "flags": "i"
-      },
-      {
-        "type": "PATTERN",
         "value": "True",
-        "flags": "i"
-      },
-      {
-        "type": "PATTERN",
-        "value": "Var",
         "flags": "i"
       },
       {
