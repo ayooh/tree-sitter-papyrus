@@ -433,9 +433,9 @@ export default grammar({
 
     none: _ => /None/i,
 
-    array_expression: $ => seq(
+    array_expression: $ => prec.left(PREC.MEMBER, seq(
       $.expression, "[", $.expression, "]"
-    ),
+    )),
 
     parenthesized_expression: $ => prec.left(PREC.PARENTHESIS, seq(
       "(",
@@ -449,10 +449,10 @@ export default grammar({
       optional(seq("[", $.expression, "]")),
     )),
 
-    call_expression: $ => prec.left(PREC.PARENTHESIS, seq(
+    call_expression: $ => seq(
       field("function", choice($.dot_operator, $.identifier)),
       field("arguments", $.arguments),
-    )),
+    ),
 
     arguments: $ => seq(
       "(",

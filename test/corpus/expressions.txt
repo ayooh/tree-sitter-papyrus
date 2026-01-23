@@ -1,0 +1,65 @@
+===
+binary operator with array expression
+===
+
+ScriptName Example
+
+Bool Function IsTrue()
+	Int[] x = New Int[10]
+	x[0] = 1
+	If x[0] || x[1]
+		Return True
+	EndIf
+	Return False
+EndFunction
+
+---
+
+(source_file
+  (header_line
+    (identifier)
+    (eol))
+  (function_definition
+    (type)
+    (identifier)
+    (parameters)
+    (eol)
+    (block
+      (define_statement
+        (type)
+        (identifier)
+        (new_expression
+          (type)
+          (literal
+            (integer)))
+        (eol))
+      (assign_statement
+        (array_expression
+          (identifier)
+          (literal
+            (integer)))
+        (literal
+          (integer))
+        (eol))
+      (if_statement
+        (binary_operator
+          (array_expression
+            (identifier)
+            (literal
+              (integer)))
+          (array_expression
+            (identifier)
+            (literal
+              (integer))))
+        (eol)
+        (block
+          (return_statement
+            (literal
+              (true))
+            (eol)))
+        (eol))
+      (return_statement
+        (literal
+          (false))
+        (eol)))
+    (eol)))
