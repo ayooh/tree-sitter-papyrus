@@ -461,7 +461,9 @@ export default grammar({
     ),
 
     keyword_argument: $ => seq(
-      $.identifier, "=", $.expression,
+      field("name", $.identifier),
+      "=",
+      field("value", $.expression),
     ),
 
     _script_flag: _ => choice(

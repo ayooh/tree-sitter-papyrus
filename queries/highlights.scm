@@ -25,6 +25,9 @@
 (parameter
   (identifier) @variable.parameter)
 
+(keyword_argument
+  name: (identifier) @variable.parameter)
+
 ((identifier) @variable.builtin
   (#match? @variable.builtin "^([Ss][Ee][Ll][Ff]|[Pp][Aa][Rr][Ee][Nn][Tt])$"))
 
