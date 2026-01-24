@@ -1190,6 +1190,16 @@
           }
         ]
       }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -1434,10 +1444,6 @@
     "named": false
   },
   {
-    "type": "Bool",
-    "named": false
-  },
-  {
     "type": "Collapsed",
     "named": false
   },
@@ -1518,10 +1524,6 @@
     "named": false
   },
   {
-    "type": "Float",
-    "named": false
-  },
-  {
     "type": "Function",
     "named": false
   },
@@ -1543,10 +1545,6 @@
   },
   {
     "type": "Import",
-    "named": false
-  },
-  {
-    "type": "Int",
     "named": false
   },
   {
@@ -1582,15 +1580,7 @@
     "named": false
   },
   {
-    "type": "String",
-    "named": false
-  },
-  {
     "type": "Struct",
-    "named": false
-  },
-  {
-    "type": "Var",
     "named": false
   },
   {

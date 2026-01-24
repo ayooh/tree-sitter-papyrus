@@ -508,11 +508,11 @@ export default grammar({
     ),
 
     _element_type: $ => choice(
-      keyword("Bool"),
-      keyword("Int"),
-      keyword("Float"),
-      keyword("String"),
-      keyword("Var"),
+      alias(keyword("Bool"), $.identifier),
+      alias(keyword("Int"), $.identifier),
+      alias(keyword("Float"), $.identifier),
+      alias(keyword("String"), $.identifier),
+      alias(keyword("Var"), $.identifier),
       $._full_identifier,
     ),
 

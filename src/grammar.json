@@ -2819,52 +2819,77 @@
         {
           "type": "ALIAS",
           "content": {
-            "type": "PATTERN",
-            "value": "Bool",
-            "flags": "i"
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "Bool",
+              "flags": "i"
+            },
+            "named": false,
+            "value": "Bool"
           },
-          "named": false,
-          "value": "Bool"
+          "named": true,
+          "value": "identifier"
         },
         {
           "type": "ALIAS",
           "content": {
-            "type": "PATTERN",
-            "value": "Int",
-            "flags": "i"
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "Int",
+              "flags": "i"
+            },
+            "named": false,
+            "value": "Int"
           },
-          "named": false,
-          "value": "Int"
+          "named": true,
+          "value": "identifier"
         },
         {
           "type": "ALIAS",
           "content": {
-            "type": "PATTERN",
-            "value": "Float",
-            "flags": "i"
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "Float",
+              "flags": "i"
+            },
+            "named": false,
+            "value": "Float"
           },
-          "named": false,
-          "value": "Float"
+          "named": true,
+          "value": "identifier"
         },
         {
           "type": "ALIAS",
           "content": {
-            "type": "PATTERN",
-            "value": "String",
-            "flags": "i"
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "String",
+              "flags": "i"
+            },
+            "named": false,
+            "value": "String"
           },
-          "named": false,
-          "value": "String"
+          "named": true,
+          "value": "identifier"
         },
         {
           "type": "ALIAS",
           "content": {
-            "type": "PATTERN",
-            "value": "Var",
-            "flags": "i"
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "Var",
+              "flags": "i"
+            },
+            "named": false,
+            "value": "Var"
           },
-          "named": false,
-          "value": "Var"
+          "named": true,
+          "value": "identifier"
         },
         {
           "type": "SYMBOL",

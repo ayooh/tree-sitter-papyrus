@@ -51,3 +51,38 @@ Import Debug
   (import
     (identifier)
     (eol)))
+
+===
+variable definition
+===
+ScriptName Example
+Int Variable1
+Actor ActorRef
+Float[] FloatArray
+Bool Condition
+---
+
+(source_file
+  (header_line
+    (identifier)
+    (eol))
+  (variable_definition
+    (type
+      (identifier))
+    (identifier)
+    (eol))
+  (variable_definition
+    (type
+      (identifier))
+    (identifier)
+    (eol))
+  (variable_definition
+    (type
+      (identifier))
+    (identifier)
+    (eol))
+  (variable_definition
+    (type
+      (identifier))
+    (identifier)
+    (eol)))

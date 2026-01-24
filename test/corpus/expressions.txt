@@ -20,16 +20,19 @@ EndFunction
     (identifier)
     (eol))
   (function_definition
-    (type)
+    (type
+      (identifier))
     (identifier)
     (parameters)
     (eol)
     (block
       (define_statement
-        (type)
+        (type
+          (identifier))
         (identifier)
         (new_expression
-          (type)
+          (type
+            (identifier))
           (literal
             (integer)))
         (eol))
