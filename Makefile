@@ -1,6 +1,7 @@
 LANGUAGE_NAME := tree-sitter-papyrus
 HOMEPAGE_URL := https://github.com/ayooh/tree-sitter-papyrus
 VERSION := 0.1.0
+DESCRIPTION := Papyrus grammar for tree-sitter
 
 # repository
 SRC_DIR := src
