@@ -1,0 +1,83 @@
+===
+line continuation with trailing whitespace
+===
+ScriptName a
+Function f()
+  int b = 1
+  b = 1 + 2 \	
+  + 3
+EndFunction
+---
+
+(source_file
+  (header_line
+    (identifier)
+    (eol))
+  (function_definition
+    (identifier)
+    (parameters)
+    (eol)
+    (block
+      (define_statement
+        (type
+          (identifier))
+        (identifier)
+        (literal
+          (integer))
+        (eol))
+      (assign_statement
+        (identifier)
+        (binary_operator
+          (binary_operator
+            (literal
+              (integer))
+            (literal
+              (integer)))
+          (line_terminator)
+          (literal
+            (integer)))
+        (eol)))
+    (eol)))
+
+===
+line continuation with comment is an error
+===
+ScriptName a
+Function f()
+  int b = 1
+  b = 1 + 2 \  ; comment
+  + 3
+EndFunction
+---
+
+(source_file
+  (header_line
+    (identifier)
+    (eol))
+  (function_definition
+    (identifier)
+    (parameters)
+    (eol)
+    (block
+      (define_statement
+        (type
+          (identifier))
+        (identifier)
+        (literal
+          (integer))
+        (eol))
+      (assign_statement
+        (identifier)
+        (binary_operator
+          (binary_operator
+            (literal
+              (integer))
+            (literal
+              (integer)))
+          (ERROR
+            (UNEXPECTED ';')
+            (comment))
+          (literal
+            (integer)))
+        (eol)))
+    (eol)))

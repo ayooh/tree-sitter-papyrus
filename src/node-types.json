@@ -825,12 +825,6 @@
     }
   },
   {
-    "type": "line_terminator",
-    "named": true,
-    "extra": true,
-    "fields": {}
-  },
-  {
     "type": "literal",
     "named": true,
     "fields": {},
@@ -1596,10 +1590,6 @@
     "named": false
   },
   {
-    "type": "\\",
-    "named": false
-  },
-  {
     "type": "]",
     "named": false
   },
@@ -1627,6 +1617,11 @@
   {
     "type": "identifier",
     "named": true
+  },
+  {
+    "type": "line_terminator",
+    "named": true,
+    "extra": true
   },
   {
     "type": "none",

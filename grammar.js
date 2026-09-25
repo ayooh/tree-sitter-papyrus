@@ -531,7 +531,7 @@ export default grammar({
 
     _newline: _ => "\n",
 
-    line_terminator: $ => seq("\\", $._newline),
+    line_terminator: $ => token(seq("\\", /[ \t\r]*/, "\n")),
 
     identifier: _ => /[a-zA-Z_][a-zA-Z_0-9]*/,
   }
