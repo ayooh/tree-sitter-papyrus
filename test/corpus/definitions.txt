@@ -86,3 +86,41 @@ Bool Condition
       (identifier))
     (identifier)
     (eol)))
+
+===
+namespaced extends
+===
+ScriptName Example Extends MyMod:Base
+---
+
+(source_file
+  (header_line
+    (identifier)
+    (namespaces
+      (identifier))
+    (identifier)
+    (eol)))
+
+===
+namespaced import
+===
+ScriptName Example
+Import MyMod:Utility
+Import MyMod:Sub:Util
+---
+
+(source_file
+  (header_line
+    (identifier)
+    (eol))
+  (import
+    (namespaces
+      (identifier))
+    (identifier)
+    (eol))
+  (import
+    (namespaces
+      (identifier)
+      (identifier))
+    (identifier)
+    (eol)))

@@ -43,7 +43,7 @@ export default grammar({
       /Int/i, /Length/i, /Native/i, /New/i, /None/i, /Property/i, /Return/i,
       /ScriptName/i, /State/i, /String/i, /True/i, /While/i,
 
-      // keywords added in Fallout 4
+      // keywords added in Fallout 4 (left unreserved so Skyrim keeps them as identifiers)
       // /BetaOnly/i, /Const/i, /CustomEvent/i, /CustomEventName/i, /DebugOnly/i,
       // /EndGroup/i, /EndStruct/i, /Group/i, /Is/i, /ScriptEventName/i, /Struct/i,
       // /StructVarName/i, /Var/i,
@@ -62,7 +62,7 @@ export default grammar({
     header_line: $ => seq(
       keyword("ScriptName"),
       $._full_identifier,
-      optional(seq(keyword("Extends"), field("parent", $.identifier))),
+      optional(seq(keyword("Extends"), field("parent", $._full_identifier))),
       repeat($._script_flag),
       $.eol,
     ),
@@ -236,7 +236,7 @@ export default grammar({
 
     _event_definition_header: $ => seq(
       keyword("Event"),
-      optional(seq(field("object", $.identifier), ".")),
+      optional(seq(field("object", $._full_identifier), ".")),
       field("name", $.identifier),
       field("parameters", $.parameters),
     ),
@@ -285,6 +285,7 @@ export default grammar({
       $.new_expression,
       $.call_expression,
       $.identifier,
+      $.namespaced_identifier,
     ),
 
     _compound_statement: $ => choice(
@@ -520,6 +521,11 @@ export default grammar({
 
     _full_identifier: $ => seq(
       field("namespaces", alias(repeat(seq($.identifier, ":")), $.namespaces)),
+      field("name", $.identifier),
+    ),
+
+    namespaced_identifier: $ => seq(
+      field("namespaces", alias(repeat1(seq($.identifier, ":")), $.namespaces)),
       field("name", $.identifier),
     ),
 

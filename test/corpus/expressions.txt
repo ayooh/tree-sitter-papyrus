@@ -68,6 +68,55 @@ EndFunction
     (eol)))
 
 ===
+namespaced call
+===
+ScriptName Example
+Function Foo(MyMod:Shapes:Point pt)
+  MyMod:Utility.MyGlobal()
+  MyMod:Sub:Util.RootCall()
+EndFunction
+---
+
+(source_file
+  (header_line
+    (identifier)
+    (eol))
+  (function_definition
+    (identifier)
+    (parameters
+      (parameter
+        (type
+          (namespaces
+            (identifier)
+            (identifier))
+          (identifier))
+        (identifier)))
+    (eol)
+    (block
+      (expression_statement
+        (call_expression
+          (dot_operator
+            (namespaced_identifier
+              (namespaces
+                (identifier))
+              (identifier))
+            (identifier))
+          (arguments))
+        (eol))
+      (expression_statement
+        (call_expression
+          (dot_operator
+            (namespaced_identifier
+              (namespaces
+                (identifier)
+                (identifier))
+              (identifier))
+            (identifier))
+          (arguments))
+        (eol)))
+    (eol)))
+
+===
 if else statement
 ===
 ScriptName Example

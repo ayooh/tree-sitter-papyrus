@@ -36,6 +36,10 @@
         "named": true
       },
       {
+        "type": "namespaced_identifier",
+        "named": true
+      },
+      {
         "type": "new_expression",
         "named": true
       },
@@ -513,7 +517,7 @@
         ]
       },
       "name": {
-        "multiple": false,
+        "multiple": true,
         "required": true,
         "types": [
           {
@@ -522,12 +526,26 @@
           }
         ]
       },
-      "object": {
+      "namespaces": {
         "multiple": false,
         "required": false,
         "types": [
           {
+            "type": "namespaces",
+            "named": true
+          }
+        ]
+      },
+      "object": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
             "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "namespaces",
             "named": true
           }
         ]
@@ -676,7 +694,7 @@
     "named": true,
     "fields": {
       "name": {
-        "multiple": false,
+        "multiple": true,
         "required": true,
         "types": [
           {
@@ -686,7 +704,7 @@
         ]
       },
       "namespaces": {
-        "multiple": false,
+        "multiple": true,
         "required": false,
         "types": [
           {
@@ -696,11 +714,15 @@
         ]
       },
       "parent": {
-        "multiple": false,
+        "multiple": true,
         "required": false,
         "types": [
           {
             "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "namespaces",
             "named": true
           }
         ]
@@ -861,6 +883,32 @@
           "named": true
         }
       ]
+    }
+  },
+  {
+    "type": "namespaced_identifier",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "namespaces": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "namespaces",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {

@@ -104,7 +104,7 @@
                   "name": "parent",
                   "content": {
                     "type": "SYMBOL",
-                    "name": "identifier"
+                    "name": "_full_identifier"
                   }
                 }
               ]
@@ -1252,7 +1252,7 @@
                   "name": "object",
                   "content": {
                     "type": "SYMBOL",
-                    "name": "identifier"
+                    "name": "_full_identifier"
                   }
                 },
                 {
@@ -1464,6 +1464,10 @@
         {
           "type": "SYMBOL",
           "name": "identifier"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "namespaced_identifier"
         }
       ]
     },
@@ -2911,6 +2915,44 @@
             "type": "ALIAS",
             "content": {
               "type": "REPEAT",
+              "content": {
+                "type": "SEQ",
+                "members": [
+                  {
+                    "type": "SYMBOL",
+                    "name": "identifier"
+                  },
+                  {
+                    "type": "STRING",
+                    "value": ":"
+                  }
+                ]
+              }
+            },
+            "named": true,
+            "value": "namespaces"
+          }
+        },
+        {
+          "type": "FIELD",
+          "name": "name",
+          "content": {
+            "type": "SYMBOL",
+            "name": "identifier"
+          }
+        }
+      ]
+    },
+    "namespaced_identifier": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "FIELD",
+          "name": "namespaces",
+          "content": {
+            "type": "ALIAS",
+            "content": {
+              "type": "REPEAT1",
               "content": {
                 "type": "SEQ",
                 "members": [

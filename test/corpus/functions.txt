@@ -1,0 +1,41 @@
+===
+namespaced remote event
+===
+ScriptName Example
+Event MyMod:Base.MyCustomEvent(MyMod:Base akSender, Var[] akArgs)
+  Debug.Trace("custom")
+EndEvent
+---
+
+(source_file
+  (header_line
+    (identifier)
+    (eol))
+  (event_definition
+    (namespaces
+      (identifier))
+    (identifier)
+    (identifier)
+    (parameters
+      (parameter
+        (type
+          (namespaces
+            (identifier))
+          (identifier))
+        (identifier))
+      (parameter
+        (type
+          (identifier))
+        (identifier)))
+    (eol)
+    (block
+      (expression_statement
+        (call_expression
+          (dot_operator
+            (identifier)
+            (identifier))
+          (arguments
+            (literal
+              (string))))
+        (eol)))
+    (eol)))
