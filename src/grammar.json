@@ -1613,6 +1613,10 @@
           "value": "Else"
         },
         {
+          "type": "SYMBOL",
+          "name": "eol"
+        },
+        {
           "type": "ALIAS",
           "content": {
             "type": "REPEAT",

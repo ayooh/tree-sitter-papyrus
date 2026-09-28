@@ -66,3 +66,61 @@ EndFunction
           (false))
         (eol)))
     (eol)))
+
+===
+if else statement
+===
+ScriptName Example
+Function Foo()
+  Bool a = True
+  If a
+    Debug.Trace("a")
+  Else
+    Debug.Trace("b")
+  EndIf
+EndFunction
+---
+
+(source_file
+  (header_line
+    (identifier)
+    (eol))
+  (function_definition
+    (identifier)
+    (parameters)
+    (eol)
+    (block
+      (define_statement
+        (type
+          (identifier))
+        (identifier)
+        (literal
+          (true))
+        (eol))
+      (if_statement
+        (identifier)
+        (eol)
+        (block
+          (expression_statement
+            (call_expression
+              (dot_operator
+                (identifier)
+                (identifier))
+              (arguments
+                (literal
+                  (string))))
+            (eol)))
+        (else_clause
+          (eol)
+          (block
+            (expression_statement
+              (call_expression
+                (dot_operator
+                  (identifier)
+                  (identifier))
+                (arguments
+                  (literal
+                    (string))))
+              (eol))))
+        (eol)))
+    (eol)))

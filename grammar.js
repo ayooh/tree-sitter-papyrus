@@ -312,6 +312,7 @@ export default grammar({
 
     else_clause: $ => seq(
       keyword("Else"),
+      $.eol,
       alias(repeat($._statement), $.block),
     ),
 
