@@ -1723,6 +1723,24 @@
                     "type": "SYMBOL",
                     "name": "expression"
                   }
+                },
+                {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "ALIAS",
+                      "content": {
+                        "type": "PATTERN",
+                        "value": "Const",
+                        "flags": "i"
+                      },
+                      "named": false,
+                      "value": "Const"
+                    },
+                    {
+                      "type": "BLANK"
+                    }
+                  ]
                 }
               ]
             },

@@ -332,6 +332,7 @@ export default grammar({
       optional(seq(
         "=",
         field("value", $.expression),
+        optional(keyword("Const")),
       )),
       $.eol,
     ),

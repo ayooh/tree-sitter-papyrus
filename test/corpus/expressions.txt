@@ -173,3 +173,47 @@ EndFunction
               (eol))))
         (eol)))
     (eol)))
+
+===
+define statement with const
+===
+ScriptName Example
+Function Foo()
+  int k = Utility.RandomInt(1, 10) const
+  Debug.Trace("done")
+EndFunction
+---
+
+(source_file
+  (header_line
+    (identifier)
+    (eol))
+  (function_definition
+    (identifier)
+    (parameters)
+    (eol)
+    (block
+      (define_statement
+        (type
+          (identifier))
+        (identifier)
+        (call_expression
+          (dot_operator
+            (identifier)
+            (identifier))
+          (arguments
+            (literal
+              (integer))
+            (literal
+              (integer))))
+        (eol))
+      (expression_statement
+        (call_expression
+          (dot_operator
+            (identifier)
+            (identifier))
+          (arguments
+            (literal
+              (string))))
+        (eol)))
+    (eol)))
